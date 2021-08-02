@@ -8,7 +8,7 @@ ColBERT-QA extends the scalable ColBERT retriever for OpenQA. It introduces Rele
 
 ### Implementation
 
-The system implementation lives as part of the [ColBERT](https://github.com/stanford-futuredata/ColBERT) repository.
+The system implementation lives as part of the parent [ColBERT](https://github.com/stanford-futuredata/ColBERT) repository. We will expand on the instructions soon. For the general instructions, refer to the README of the parent repository.
 
 After cloning, make sure you obtain the code for the submodule too:
 
@@ -16,4 +16,7 @@ After cloning, make sure you obtain the code for the submodule too:
 git submodule update --init --recursive
 ```
 
-More detailed instructions coming soon.
+We use [Anserini](https://github.com/castorini/anserini) for the BM25 implementation. The default corpus is Karpukhin et al.'s [21M-passage Wikipedia 2018 dump](https://dl.fbaipublicfiles.com/dpr/wikipedia_split/psgs_w100.tsv.gz). In addition to training, indexing, and retrieval, the following scripts in the parent repository are useful for the RGS process.
+
+- utility/supervision/triples.py
+- utility/evaluation/annotate_EM.py
