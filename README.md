@@ -16,7 +16,7 @@ After cloning, make sure you obtain the code for the submodule too:
 git submodule update --init --recursive
 ```
 
-We use [Anserini](https://github.com/castorini/anserini) for the BM25 implementation. The default corpus is Karpukhin et al.'s [21M-passage Wikipedia 2018 dump](https://dl.fbaipublicfiles.com/dpr/wikipedia_split/psgs_w100.tsv.gz). In addition to training, indexing, and retrieval, the following scripts in the parent repository are useful for the RGS process.
+We use [Anserini](https://github.com/castorini/anserini) for the BM25 implementation, which is used to initiate the first round of RGS. The second and third rounds rely on ColBERT itself. The default corpus is Karpukhin et al.'s [21M-passage Wikipedia 2018 dump](https://dl.fbaipublicfiles.com/dpr/wikipedia_split/psgs_w100.tsv.gz). In addition to training, indexing, and retrieval, the following scripts in the parent repository are useful for the RGS process.
 
 - utility/supervision/triples.py
 - utility/evaluation/annotate_EM.py
